@@ -1,0 +1,8 @@
+jobs:
+- job: VS2019
+  pool:
+    vmImage: 'windows-2019'
+  steps:
+  - script: |
+      call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
+      cl /O2 MySource.cpp
